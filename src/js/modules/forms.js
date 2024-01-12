@@ -8,7 +8,7 @@ const forms = () => {
             item.value = item.value.replace(/\D/, '');
         });
     });
-
+    
     const message = {
         loading: 'Zagruzka...',
         success: 'Sbasibo! Skoro my s vami svyajensya',
