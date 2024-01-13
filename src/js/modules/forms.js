@@ -5,7 +5,7 @@ const forms = (state) => {
           inputs = document.querySelectorAll('input');
 
     checkNumInputs('input[name="user_phone"]');
-    
+
     const message = {
         loading: 'Zagruzka...',
         success: 'Sbasibo! Skoro my s vami svyajensya',
@@ -54,6 +54,11 @@ const forms = (state) => {
                     setTimeout(() => {
                         statusMessage.remove();
                     }, 5000);
+                    for (let key in state) {
+                        delete state[key];
+                    }
+                    console.log(state);
+                    document.querySelector('.popup_calc_end').style.display = 'none';
                 });
         });
     });

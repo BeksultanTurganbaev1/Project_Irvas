@@ -5,9 +5,7 @@ const changeModalState = (state) => {
           windowWidth = document.querySelectorAll('#width'),
           windowHeight = document.querySelectorAll('#height'),
           windowType = document.querySelectorAll('#view_type'),
-          windowProfile = document.querySelectorAll('.checkbox'),
-          windowFirstBtn = document.querySelector('.popup_calc_button'),
-          windowSecondBtn = document.querySelector('.popup_calc_profile_button');
+          windowProfile = document.querySelectorAll('.checkbox');
 
     checkNumInputs('#width');
     checkNumInputs('#height');
@@ -37,11 +35,6 @@ const changeModalState = (state) => {
                         break;
                 }
                 console.log(state);
-                if (state.hasOwnProperty('form') && state.hasOwnProperty('width') && state.hasOwnProperty('height')) {
-                    document.querySelector('.popup_calc_profile').style.display = 'block';
-                } else {
-                    document.querySelector('.popup_calc_profile').style.display = 'none';
-                }
             });
         });
     }
